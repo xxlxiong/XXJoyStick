@@ -49,4 +49,8 @@
     NSLog(@"%d",joyStickNode.stickDirection);
 }
 
+- (void)touchEnd:(XXJoyStickNode *)joyStickNode oldDirect:(CGVector)oldDirect
+{
+    NSLog(@"%d",joyStickNode.stickDirection);
+}
 @end

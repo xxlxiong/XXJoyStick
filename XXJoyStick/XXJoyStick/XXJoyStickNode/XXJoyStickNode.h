@@ -26,6 +26,8 @@ enum JoyStickDirection
 
 - (void)directionChange:(XXJoyStickNode*)joyStickNode oldDirect:(CGVector)oldDirect newDirection:(CGVector)newDirection;
 
+- (void)touchEnd:(XXJoyStickNode*)joyStickNode oldDirect:(CGVector)oldDirect;
+
 @end
 
 @interface XXJoyStickNode : SKNode

@@ -100,11 +100,8 @@
         return;
     }
     
-    if([_delegate respondsToSelector:@selector(directionChangeBig:oldDirect:newDirection:)])
-        [_delegate directionChangeBig:self oldDirect:_direct newDirection:CGVectorMake(0, 0)];
-    
-    if([_delegate respondsToSelector:@selector(directionChange:oldDirect:newDirection:)])
-        [_delegate directionChange:self oldDirect:CGVectorMake(0, 0) newDirection:_direct];
+    if([_delegate respondsToSelector:@selector(touchEnd:oldDirect:)])
+        [_delegate touchEnd:self oldDirect:_direct];
     
     _stickDirection = JK_NONE;
     _direct = CGVectorMake(0, 0);
