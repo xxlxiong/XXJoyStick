@@ -56,7 +56,7 @@
         [_delegate directionChange:self oldDirect:CGVectorMake(0, 0) newDirection:_direct];
     }
     
-    enum JoyStickDirection _direction = [self changeVector2Direction:_direct];
+    JoyStickDirection _direction = [self changeVector2Direction:_direct];
     //改变很大,改变了大致方位
     if (_direction != _stickDirection) {
         _stickDirection = _direction;
@@ -81,7 +81,7 @@
         [_delegate directionChange:self oldDirect:CGVectorMake(0, 0) newDirection:_direct];
     }
     
-    enum JoyStickDirection _direction = [self changeVector2Direction:_direct];
+    JoyStickDirection _direction = [self changeVector2Direction:_direct];
     //改变很大,改变了大致方位
     if (_direction != _stickDirection) {
         _stickDirection = _direction;
@@ -110,7 +110,7 @@
     [self stickMove:_direct distance:0];
 }
 
-- (enum JoyStickDirection)changeVector2Direction:(CGVector)vector
+- (JoyStickDirection)changeVector2Direction:(CGVector)vector
 {
     float tanAngle = _direct.dy/_direct.dx;
     if (_direct.dx >0 && fabsf(tanAngle)<=1) {

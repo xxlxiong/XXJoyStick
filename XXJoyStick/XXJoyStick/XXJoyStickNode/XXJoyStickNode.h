@@ -17,6 +17,7 @@ enum JoyStickDirection
     JK_UP,
     JK_BOTTOM
 };
+typedef enum JoyStickDirection JoyStickDirection;
 
 @protocol JoyStickDelegate <NSObject>
 
@@ -43,7 +44,7 @@ enum JoyStickDirection
 @property (nonatomic,readonly) CGVector direct;
 @property (nonatomic,readonly) float moveDistance;
 
-@property (nonatomic,readwrite) enum JoyStickDirection stickDirection;
+@property (nonatomic,readwrite) JoyStickDirection stickDirection;
 - (id)initWithSize:(CGSize)size;
 
 + (instancetype)getJoyStickNode;
