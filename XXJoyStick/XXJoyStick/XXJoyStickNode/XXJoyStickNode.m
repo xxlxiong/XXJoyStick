@@ -140,4 +140,12 @@
     
     joyStickNode.position = postion;
 }
+
+#pragma mark --
+-(void)setSize:(CGSize)size
+{
+    _size = size;
+    backgroundNode.size = size;
+    joyStickNode.size = CGSizeMake(size.width/2, size.height/2);
+}
 @end

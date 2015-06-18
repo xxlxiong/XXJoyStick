@@ -25,6 +25,7 @@ typedef enum JoyStickDirection JoyStickDirection;
 //direction change
 - (void)directionChangeBig:(XXJoyStickNode*)joyStickNode oldDirect:(CGVector)oldDirect newDirection:(CGVector)newDirection;
 
+//direction not change
 - (void)directionChange:(XXJoyStickNode*)joyStickNode oldDirect:(CGVector)oldDirect newDirection:(CGVector)newDirection;
 
 - (void)touchEnd:(XXJoyStickNode*)joyStickNode oldDirect:(CGVector)oldDirect;
@@ -36,13 +37,13 @@ typedef enum JoyStickDirection JoyStickDirection;
     SKSpriteNode *backgroundNode;
     SKSpriteNode *joyStickNode;
     
-    CGSize _size;
 }
 
 @property (nonatomic, assign) id<JoyStickDelegate> delegate;
 
 @property (nonatomic,readonly) CGVector direct;
 @property (nonatomic,readonly) float moveDistance;
+@property (nonatomic, assign) CGSize size;
 
 @property (nonatomic,readwrite) JoyStickDirection stickDirection;
 - (id)initWithSize:(CGSize)size;
